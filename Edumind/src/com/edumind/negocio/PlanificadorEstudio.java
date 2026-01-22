@@ -1,8 +1,6 @@
 package com.edumind.negocio;
 
-import com.edumind.datos.BloqueAgenda;
-import com.edumind.datos.HorarioEstudio;
-import com.edumind.datos.Tarea;
+import com.edumind.datos.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -11,73 +9,43 @@ import java.util.PriorityQueue;
 
 public class PlanificadorEstudio {
 
-    public ArrayList<BloqueAgenda> generarAgenda(
-            PriorityQueue<Tarea> tareas,
-            ArrayList<HorarioEstudio> horarios,
-            LocalDate inicio,
-            LocalDate fin) {
+    public ArrayList<BloqueAgenda> generarAgenda(PriorityQueue<Tarea> cola, ArrayList<HorarioEstudio> horarios,
+                                                 LocalDate inicio, LocalDate fin, GestorAcademico gestor) {
 
         ArrayList<BloqueAgenda> agenda = new ArrayList<>();
 
-        // Convertimos a lista ordenada por prioridad (la PriorityQueue ya lo hace)
-        PriorityQueue<Tarea> copiaTareas = new PriorityQueue<>(tareas);
-
-        // Recorrer cada día del rango
         LocalDate fechaActual = inicio;
+
         while (!fechaActual.isAfter(fin)) {
 
-            // Para cada horario del día
             for (HorarioEstudio h : horarios) {
 
-                LocalTime horaInicio = h.getInicio();
-                LocalTime horaFin = h.getFin();
+                LocalTime inicioBloque = h.getInicio();
+                LocalTime finBloque = h.getFin();
 
-                // Mientras haya tiempo en el bloque
-                while (horaInicio.isBefore(horaFin)) {
+                if (!cola.isEmpty()) {
 
-                    if (copiaTareas.isEmpty()) {
-                        // No hay tareas: se marca como libre
-                        agenda.add(new BloqueAgenda(
-                                "Libre",               // titulo
-                                "Sin tarea asignada",  // descripcion
-                                fechaActual,           // fecha
-                                1                      // duración (ejemplo 1 hora)
-                        ));
-                        break;
+                    Tarea tarea = cola.poll();
+
+                    // Si no tiene técnica, asigna una real desde gestor
+                    if (tarea.getTecnicaRecomendada() == null || tarea.getTecnicaRecomendada().isEmpty()) {
+                        gestor.recomendarTecnica(tarea);
                     }
 
-                    Tarea tarea = copiaTareas.peek();
-
-                    // Cada unidad de tiempo se considera 1 hora
-                    int tiempoTarea = tarea.getTiempo();
-
-                    LocalTime finBloque = horaInicio.plusHours(tiempoTarea);
-
-                    // Si no cabe en el horario, se sale del ciclo
-                    if (finBloque.isAfter(horaFin)) {
-                        agenda.add(new BloqueAgenda(
-                                "Libre",
-                                "No cabe la tarea en este horario",
-                                fechaActual,
-                                1
-                        ));
-                        break;
-                    }
-
-                    // Se agrega el bloque con la tarea
-                    agenda.add(new BloqueAgenda(
-                            tarea.getDescripcion(),   // titulo
-                            "Materia: " + tarea.getMateria().getNombre() +
-                                    " | Tipo: " + tarea.getTipo(),
+                    BloqueAgenda bloque = new BloqueAgenda(
                             fechaActual,
-                            tiempoTarea
-                    ));
+                            inicioBloque,
+                            finBloque,
+                            tarea.getDescripcion(),
+                            tarea.getMateria().getNombre(),
+                            tarea.getPrioridad(),
+                            tarea.getTecnicaRecomendada(),
+                            tarea.getDescripcionTecnica(),
+                            tarea.getPasosTecnica(),
+                            tarea.getCuandoUsar()
+                    );
 
-                    // Se avanza en el horario
-                    horaInicio = finBloque;
-
-                    // Se elimina la tarea (ya asignada)
-                    copiaTareas.poll();
+                    agenda.add(bloque);
                 }
             }
 

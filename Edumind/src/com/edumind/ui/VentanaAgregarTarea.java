@@ -1,105 +1,98 @@
 package com.edumind.ui;
 
+import com.edumind.datos.Materia;
+import com.edumind.datos.Tarea;
 import com.edumind.negocio.GestorAcademico;
 
 import javax.swing.*;
 import java.awt.*;
 import java.time.LocalDate;
-import java.time.format.DateTimeParseException;
+import java.time.ZoneId;
+import java.util.Date;
 
 public class VentanaAgregarTarea extends JDialog {
 
     private GestorAcademico gestor;
 
+    private JTextField txtDescripcion;
+    private JSpinner spTiempo;
+    private JSpinner spComplejidad;
+    private JComboBox<Materia> cbMaterias;
+    private JTextField txtTipo;
+    private JSpinner spFechaEntrega; // <-- fecha con JSpinner
+
     public VentanaAgregarTarea(JFrame parent, GestorAcademico gestor) {
-        super(parent, true);
+        super(parent, "Agregar tarea", true);
         this.gestor = gestor;
         initUI();
     }
 
     private void initUI() {
-        setTitle("Agregar Tarea");
-        setSize(450, 400);
+        setSize(400, 400);
         setLocationRelativeTo(null);
-        setLayout(new GridLayout(8, 2, 10, 10));
+        setLayout(new GridLayout(7, 2, 10, 10));
 
-        // 1) Descripción
         add(new JLabel("Descripción:"));
-        JTextField txtDescripcion = new JTextField();
+        txtDescripcion = new JTextField();
         add(txtDescripcion);
 
-        // 2) Materia (ComboBox)
-        add(new JLabel("Materia:"));
-        JComboBox<String> cbMateria = new JComboBox<>();
-        for (String nombre : gestor.getListaMaterias()) {
-            cbMateria.addItem(nombre);
-        }
-        add(cbMateria);
-
-        // 3) Tipo de tarea
-        add(new JLabel("Tipo de tarea:"));
-        JComboBox<String> cbTipo = new JComboBox<>();
-        cbTipo.addItem("Lectura");
-        cbTipo.addItem("Ejercicio");
-        cbTipo.addItem("Proyecto");
-        cbTipo.addItem("Examen");
-        cbTipo.addItem("Otro");
-        add(cbTipo);
-
-        // 4) Fecha de entrega
-        add(new JLabel("Fecha entrega (AAAA-MM-DD):"));
-        JTextField txtFecha = new JTextField();
-        add(txtFecha);
-
-        // 5) Complejidad (1-5)
-        add(new JLabel("Complejidad (1-5):"));
-        JSpinner spComplejidad = new JSpinner(new SpinnerNumberModel(1, 1, 5, 1));
-        add(spComplejidad);
-
-        // 6) Tiempo estimado (horas)
-        add(new JLabel("Tiempo estimado (horas):"));
-        JSpinner spTiempo = new JSpinner(new SpinnerNumberModel(1, 1, 24, 1));
+        add(new JLabel("Tiempo (min):"));
+        spTiempo = new JSpinner(new SpinnerNumberModel(30, 10, 300, 5));
         add(spTiempo);
 
-        // Botón agregar
-        JButton btnAgregar = new JButton("Agregar Tarea");
-        add(btnAgregar);
+        add(new JLabel("Complejidad (1-10):"));
+        spComplejidad = new JSpinner(new SpinnerNumberModel(1, 1, 10, 1));
+        add(spComplejidad);
 
-        // Botón cancelar
-        JButton btnCancelar = new JButton("Cancelar");
-        add(btnCancelar);
+        add(new JLabel("Materia:"));
+        cbMaterias = new JComboBox<>();
+        add(cbMaterias);
 
-        btnAgregar.addActionListener(e -> {
-            String desc = txtDescripcion.getText();
-            String materia = (String) cbMateria.getSelectedItem();
-            String tipo = (String) cbTipo.getSelectedItem();
-            String fechaStr = txtFecha.getText();
-            int complejidad = (int) spComplejidad.getValue();
-            int tiempo = (int) spTiempo.getValue();
+        add(new JLabel("Tipo:"));
+        txtTipo = new JTextField();
+        add(txtTipo);
 
-            // Validaciones
-            if (desc.isEmpty() || materia == null || fechaStr.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Complete todos los campos.");
-                return;
-            }
+        add(new JLabel("Fecha entrega:"));
+        spFechaEntrega = new JSpinner(new SpinnerDateModel());
+        JSpinner.DateEditor dateEditor = new JSpinner.DateEditor(spFechaEntrega, "yyyy-MM-dd");
+        spFechaEntrega.setEditor(dateEditor);
+        add(spFechaEntrega);
 
-            try {
-                LocalDate fecha = LocalDate.parse(fechaStr);
+        JButton btnOK = new JButton("Agregar");
+        btnOK.addActionListener(e -> agregarTarea());
+        add(btnOK);
 
-                boolean ok = gestor.agregarTarea(desc, fecha, complejidad, tiempo, materia, tipo);
+        JButton btnCancel = new JButton("Cancelar");
+        btnCancel.addActionListener(e -> dispose());
+        add(btnCancel);
 
-                if (ok) {
-                    JOptionPane.showMessageDialog(this, "Tarea agregada con éxito.");
-                    dispose();
-                } else {
-                    JOptionPane.showMessageDialog(this, "La materia no existe.");
-                }
+        cargarMaterias();
+    }
 
-            } catch (DateTimeParseException ex) {
-                JOptionPane.showMessageDialog(this, "Fecha inválida. Use AAAA-MM-DD.");
-            }
-        });
+    private void cargarMaterias() {
+        cbMaterias.removeAllItems();
+        for (Materia m : gestor.getListaMaterias()) {
+            cbMaterias.addItem(m);
+        }
+    }
 
-        btnCancelar.addActionListener(e -> dispose());
+    private void agregarTarea() {
+        String descripcion = txtDescripcion.getText();
+        int tiempo = (int) spTiempo.getValue();
+        int complejidad = (int) spComplejidad.getValue();
+        Materia materia = (Materia) cbMaterias.getSelectedItem();
+        String tipo = txtTipo.getText();
+
+        // convertir Date a LocalDate
+        Date fechaDate = (Date) spFechaEntrega.getValue();
+        LocalDate fechaEntrega = fechaDate.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+
+        Tarea tarea = new Tarea(descripcion, fechaEntrega, complejidad, tiempo, materia, tipo);
+        gestor.agregarTarea(tarea);
+
+        JOptionPane.showMessageDialog(this, "Tarea agregada correctamente");
+        dispose();
     }
 }

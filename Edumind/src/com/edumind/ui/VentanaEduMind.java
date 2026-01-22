@@ -1,9 +1,10 @@
 package com.edumind.ui;
 
-import com.edumind.datos.BloqueAgenda;
-import com.edumind.datos.HorarioEstudio;
-import com.edumind.negocio.GestorAcademico;
+import com.edumind.datos.Materia;
 import com.edumind.datos.Tarea;
+import com.edumind.datos.HorarioEstudio;
+import com.edumind.datos.BloqueAgenda;
+import com.edumind.negocio.GestorAcademico;
 
 import javax.swing.*;
 import java.awt.*;
@@ -48,9 +49,7 @@ public class VentanaEduMind extends JFrame {
         btnBuscar.addActionListener(e -> buscarConFiltros());
         btnAgenda.addActionListener(e -> verAgenda());
         btnHistorial.addActionListener(e -> verHistorial());
-        btnHorario.addActionListener(e -> {
-            new VentanaHorario(this, gestor).setVisible(true);
-        });
+        btnHorario.addActionListener(e -> new VentanaHorario(this, gestor).setVisible(true));
 
         botones.add(btnMateria);
         botones.add(btnTarea);
@@ -62,8 +61,6 @@ public class VentanaEduMind extends JFrame {
         panel.add(botones, BorderLayout.CENTER);
         add(panel);
     }
-
-    //MATERIA
 
     private void abrirAgregarMateria() {
 
@@ -88,13 +85,11 @@ public class VentanaEduMind extends JFrame {
             return;
         }
 
-        boolean ok = gestor.agregarMateria(nombre.trim(), importancia);
+        Materia m = new Materia(nombre.trim(), importancia);
+        gestor.agregarMateria(m);
 
-        JOptionPane.showMessageDialog(this,
-                ok ? "Materia agregada correctamente" : "La materia ya existe");
+        JOptionPane.showMessageDialog(this, "Materia agregada correctamente");
     }
-
-    // TAREA
 
     private void abrirAgregarTarea() {
 
@@ -105,28 +100,20 @@ public class VentanaEduMind extends JFrame {
 
         JTextField txtDesc = new JTextField();
 
-        // Fecha visual
         JSpinner spFecha = new JSpinner(new SpinnerDateModel());
         spFecha.setEditor(new JSpinner.DateEditor(spFecha, "yyyy-MM-dd"));
 
         JTextField txtComplejidad = new JTextField();
 
-        // Tiempo estimado
         JComboBox<String> comboTiempo = new JComboBox<>(new String[]{
-                "15 minutos",
-                "30 minutos",
-                "1 hora",
-                "+1 hora"
+                "15 minutos", "30 minutos", "1 hora", "+1 hora"
         });
 
-        JComboBox<String> comboMateria =
-                new JComboBox<>(gestor.getListaMaterias().toArray(new String[0]));
+        JComboBox<Materia> comboMateria =
+                new JComboBox<>(gestor.getListaMaterias().toArray(new Materia[0]));
 
         JComboBox<String> comboTipo = new JComboBox<>(new String[]{
-                "Lectura",
-                "Examen",
-                "Proyecto",
-                "Investigación"
+                "Lectura", "Examen", "Proyecto", "Investigación"
         });
 
         JPanel panel = new JPanel(new GridLayout(0, 2, 10, 10));
@@ -148,7 +135,6 @@ public class VentanaEduMind extends JFrame {
 
         if (result != JOptionPane.OK_OPTION) return;
 
-        // Validaciones
         String desc = txtDesc.getText().trim();
         if (desc.isEmpty()) {
             JOptionPane.showMessageDialog(this, "La descripción es obligatoria");
@@ -164,33 +150,24 @@ public class VentanaEduMind extends JFrame {
             return;
         }
 
-        // Tiempo → horas
         int tiempo;
         String tiempoSel = comboTiempo.getSelectedItem().toString();
         switch (tiempoSel) {
-            case "15 minutos" -> tiempo = 1;
-            case "30 minutos" -> tiempo = 1;
-            case "1 hora" -> tiempo = 1;
+            case "15 minutos", "30 minutos", "1 hora" -> tiempo = 1;
             default -> tiempo = 2;
         }
 
         LocalDate fecha = ((java.util.Date) spFecha.getValue())
                 .toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
 
-        boolean ok = gestor.agregarTarea(
-                desc,
-                fecha,
-                complejidad,
-                tiempo,
-                comboMateria.getSelectedItem().toString(),
-                comboTipo.getSelectedItem().toString()
-        );
+        Materia materia = (Materia) comboMateria.getSelectedItem();
 
-        JOptionPane.showMessageDialog(this,
-                ok ? "Tarea agregada correctamente" : "Error al agregar tarea");
+        Tarea tarea = new Tarea(desc, fecha, complejidad, tiempo, materia, comboTipo.getSelectedItem().toString());
+        gestor.agregarTarea(tarea);
+
+        JOptionPane.showMessageDialog(this, "Tarea agregada correctamente");
     }
 
-    //BUSCADOR
     private void buscarConFiltros() {
 
         JTextField txtDesc = new JTextField();
@@ -201,8 +178,8 @@ public class VentanaEduMind extends JFrame {
         JTextField txtPrioridad = new JTextField();
 
         comboMateria.addItem("");
-        for (String m : gestor.getListaMaterias()) {
-            comboMateria.addItem(m);
+        for (Materia m : gestor.getListaMaterias()) {
+            comboMateria.addItem(m.getNombre());
         }
 
         JPanel panel = new JPanel(new GridLayout(4, 2, 10, 10));
@@ -220,7 +197,7 @@ public class VentanaEduMind extends JFrame {
 
         if (res != JOptionPane.OK_OPTION) return;
 
-        ArrayList<Tarea> resultados = gestor.getListaTareas();
+        ArrayList<Tarea> resultados = new ArrayList<>(gestor.getListaTareas());
 
         if (!txtDesc.getText().isBlank()) {
             resultados.removeIf(t ->
@@ -270,8 +247,6 @@ public class VentanaEduMind extends JFrame {
         JOptionPane.showMessageDialog(this, sb.toString(),
                 "Resultados", JOptionPane.INFORMATION_MESSAGE);
     }
-
-    //HISTORIAL
 
     private void verHistorial() {
         var h = gestor.getHistorial();
@@ -323,7 +298,10 @@ public class VentanaEduMind extends JFrame {
             return;
         }
 
-        var agenda = gestor.generarAgenda(inicio, fin);
+        // <-- CORRECCIÓN AQUÍ
+        var agenda = gestor.generarAgenda(gestor.getHorarios(), inicio, fin);
+
+
 
         JTextArea area = new JTextArea();
         area.setEditable(false);
@@ -344,122 +322,7 @@ public class VentanaEduMind extends JFrame {
         );
     }
 
-    //HORARIOS
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new VentanaEduMind().setVisible(true));
-    }
-    private void abrirHorarios() {
-
-        String[] opciones = {
-                "Agregar horario",
-                "Ver horarios"
-        };
-
-        int opcion = JOptionPane.showOptionDialog(this,
-                "Seleccione una opción",
-                "Horarios de estudio",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.INFORMATION_MESSAGE,
-                null,
-                opciones,
-                opciones[0]);
-
-        if (opcion == 0) {
-            agregarHorarioUI();
-        } else if (opcion == 1) {
-            verHorariosUI();
-        }
-    }
-    private void agregarHorarioUI() {
-
-        // Día
-        String[] dias = {
-                "Lunes", "Martes", "Miércoles",
-                "Jueves", "Viernes", "Sábado", "Domingo"
-        };
-
-        JComboBox<String> cbDia = new JComboBox<>(dias);
-
-        // Hora inicio
-        JComboBox<Integer> cbHoraInicio = new JComboBox<>();
-        JComboBox<Integer> cbMinInicio = new JComboBox<>();
-
-        // Hora fin
-        JComboBox<Integer> cbHoraFin = new JComboBox<>();
-        JComboBox<Integer> cbMinFin = new JComboBox<>();
-
-        for (int h = 0; h < 24; h++) {
-            cbHoraInicio.addItem(h);
-            cbHoraFin.addItem(h);
-        }
-
-        cbMinInicio.addItem(0);
-        cbMinInicio.addItem(30);
-        cbMinFin.addItem(0);
-        cbMinFin.addItem(30);
-
-        JPanel panel = new JPanel(new GridLayout(4, 2, 10, 10));
-        panel.add(new JLabel("Día:"));
-        panel.add(cbDia);
-
-        panel.add(new JLabel("Hora inicio:"));
-        panel.add(cbHoraInicio);
-        panel.add(new JLabel("Minutos inicio:"));
-        panel.add(cbMinInicio);
-
-        panel.add(new JLabel("Hora fin:"));
-        panel.add(cbHoraFin);
-        panel.add(new JLabel("Minutos fin:"));
-        panel.add(cbMinFin);
-
-        int res = JOptionPane.showConfirmDialog(this,
-                panel,
-                "Agregar horario de estudio",
-                JOptionPane.OK_CANCEL_OPTION);
-
-        if (res != JOptionPane.OK_OPTION) return;
-
-        LocalTime inicio = LocalTime.of(
-                (int) cbHoraInicio.getSelectedItem(),
-                (int) cbMinInicio.getSelectedItem());
-
-        LocalTime fin = LocalTime.of(
-                (int) cbHoraFin.getSelectedItem(),
-                (int) cbMinFin.getSelectedItem());
-
-        boolean ok = gestor.agregarHorario(
-                (String) cbDia.getSelectedItem(),
-                inicio,
-                fin
-        );
-
-        if (ok) {
-            JOptionPane.showMessageDialog(this,
-                    "Horario agregado correctamente");
-        } else {
-            JOptionPane.showMessageDialog(this,
-                    "Horario inválido o solapado");
-        }
-    }
-    private void verHorariosUI() {
-
-        var horarios = gestor.getHorarios();
-
-        if (horarios.isEmpty()) {
-            JOptionPane.showMessageDialog(this,
-                    "No hay horarios registrados");
-            return;
-        }
-
-        StringBuilder sb = new StringBuilder("HORARIOS DE ESTUDIO\n\n");
-
-        for (HorarioEstudio h : horarios) {
-            sb.append("• ").append(h).append("\n");
-        }
-
-        JOptionPane.showMessageDialog(this,
-                sb.toString(),
-                "Horarios",
-                JOptionPane.INFORMATION_MESSAGE);
     }
 }

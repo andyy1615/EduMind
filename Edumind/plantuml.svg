@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1259px" preserveAspectRatio="none" style="width:1415px;height:1259px;background:#FFFFFF;" version="1.1" viewBox="0 0 1415 1259" width="1415px" zoomAndPan="magnify"><defs/><g><!--MD5=[64800fa197ba661ace00beb9caab46e8]
+cluster Datos--><g id="cluster_Datos"><rect fill="none" height="624" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.5;" width="683" x="204" y="629"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="45" x="523" y="643.9951">Datos</text></g><!--MD5=[d7da499852b1251bac37d38e57af4ccf]
+cluster Estructuras--><g id="cluster_Estructuras"><rect fill="none" height="353.5" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.5;" width="374" x="1035" y="251.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="91" x="1176.5" y="266.4951">Estructuras</text></g><!--MD5=[cb6a9e3150abce53262a275c1b5a4558]
+cluster Negocio--><g id="cluster_Negocio"><rect fill="none" height="369.5" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.5;" width="622" x="342" y="219"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="64" x="621" y="233.9951">Negocio</text></g><!--MD5=[771e6e0fdba870569f0ba8e3954cae47]
+cluster Interfaz de Usuario--><g id="cluster_Interfaz de Usuario"><rect fill="none" height="99" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.5;" width="826" x="7" y="96"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="151" x="344.5" y="110.9951">Interfaz de Usuario</text></g><!--MD5=[e1fbd8021998de7e21efb904fe926118]
+class Materia--><g id="elem_Materia"><rect codeLine="7" fill="#F1F1F1" height="145.7813" id="Materia" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="137" x="733.5" y="664"/><ellipse cx="773.25" cy="680" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M776.2188,685.6406 Q775.6406,685.9375 775,686.0781 Q774.3594,686.2344 773.6563,686.2344 Q771.1563,686.2344 769.8281,684.5938 Q768.5156,682.9375 768.5156,679.8125 Q768.5156,676.6875 769.8281,675.0313 Q771.1563,673.375 773.6563,673.375 Q774.3594,673.375 775,673.5313 Q775.6563,673.6875 776.2188,673.9844 L776.2188,676.7031 Q775.5938,676.125 775,675.8594 Q774.4063,675.5781 773.7813,675.5781 Q772.4375,675.5781 771.75,676.6563 Q771.0625,677.7188 771.0625,679.8125 Q771.0625,681.9063 771.75,682.9844 Q772.4375,684.0469 773.7813,684.0469 Q774.4063,684.0469 775,683.7813 Q775.5938,683.5 776.2188,682.9219 L776.2188,685.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="792.75" y="684.8467">Materia</text><line style="stroke:#181818;stroke-width:0.5;" x1="734.5" x2="869.5" y1="696" y2="696"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="739.5" y="712.9951">-nombre : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="739.5" y="729.292">-importancia : int</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="739.5" y="745.5889">-tareas : List</text><line style="stroke:#181818;stroke-width:0.5;" x1="734.5" x2="869.5" y1="752.8906" y2="752.8906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="739.5" y="769.8857">+agregarTarea()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="739.5" y="786.1826">+getNombre()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="739.5" y="802.4795">+getImportancia()</text></g><!--MD5=[8b66b7342ebffb5468f9dad95977a8e0]
+class Tarea--><g id="elem_Tarea"><rect codeLine="16" fill="#F1F1F1" height="178.375" id="Tarea" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="159" x="465.5" y="870"/><ellipse cx="521.25" cy="886" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M524.2188,891.6406 Q523.6406,891.9375 523,892.0781 Q522.3594,892.2344 521.6563,892.2344 Q519.1563,892.2344 517.8281,890.5938 Q516.5156,888.9375 516.5156,885.8125 Q516.5156,882.6875 517.8281,881.0313 Q519.1563,879.375 521.6563,879.375 Q522.3594,879.375 523,879.5313 Q523.6563,879.6875 524.2188,879.9844 L524.2188,882.7031 Q523.5938,882.125 523,881.8594 Q522.4063,881.5781 521.7813,881.5781 Q520.4375,881.5781 519.75,882.6563 Q519.0625,883.7188 519.0625,885.8125 Q519.0625,887.9063 519.75,888.9844 Q520.4375,890.0469 521.7813,890.0469 Q522.4063,890.0469 523,889.7813 Q523.5938,889.5 524.2188,888.9219 L524.2188,891.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="541.75" y="890.8467">Tarea</text><line style="stroke:#181818;stroke-width:0.5;" x1="466.5" x2="623.5" y1="902" y2="902"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="471.5" y="918.9951">-descripcion : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="471.5" y="935.292">-tipo : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="471.5" y="951.5889">-complejidad : int</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="471.5" y="967.8857">-tiempoEstimado : int</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="471.5" y="984.1826">-prioridad : int</text><line style="stroke:#181818;stroke-width:0.5;" x1="466.5" x2="623.5" y1="991.4844" y2="991.4844"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="471.5" y="1008.4795">+getDescripcion()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="471.5" y="1024.7764">+getComplejidad()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="471.5" y="1041.0732">+getPrioridad()</text></g><!--MD5=[a2bb6630175758b30a2989776b4f2128]
+class TecnicaEstudio--><g id="elem_TecnicaEstudio"><rect codeLine="27" fill="#F1F1F1" height="129.4844" id="TecnicaEstudio" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="153" x="468.5" y="1108"/><ellipse cx="490.25" cy="1124" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M493.2188,1129.6406 Q492.6406,1129.9375 492,1130.0781 Q491.3594,1130.2344 490.6563,1130.2344 Q488.1563,1130.2344 486.8281,1128.5938 Q485.5156,1126.9375 485.5156,1123.8125 Q485.5156,1120.6875 486.8281,1119.0313 Q488.1563,1117.375 490.6563,1117.375 Q491.3594,1117.375 492,1117.5313 Q492.6563,1117.6875 493.2188,1117.9844 L493.2188,1120.7031 Q492.5938,1120.125 492,1119.8594 Q491.4063,1119.5781 490.7813,1119.5781 Q489.4375,1119.5781 488.75,1120.6563 Q488.0625,1121.7188 488.0625,1123.8125 Q488.0625,1125.9063 488.75,1126.9844 Q489.4375,1128.0469 490.7813,1128.0469 Q491.4063,1128.0469 492,1127.7813 Q492.5938,1127.5 493.2188,1126.9219 L493.2188,1129.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="505.75" y="1128.8467">TecnicaEstudio</text><line style="stroke:#181818;stroke-width:0.5;" x1="469.5" x2="620.5" y1="1140" y2="1140"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="474.5" y="1156.9951">-nombre : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="474.5" y="1173.292">-descripcion : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="474.5" y="1189.5889">-pasos : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="474.5" y="1205.8857">-cuandoUsar : String</text><line style="stroke:#181818;stroke-width:0.5;" x1="469.5" x2="620.5" y1="1213.1875" y2="1213.1875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="474.5" y="1230.1826">+toString()</text></g><!--MD5=[ff5932ffa597733cd2e2dbaf927f5124]
+class HorarioEstudio--><g id="elem_HorarioEstudio"><rect codeLine="35" fill="#F1F1F1" height="96.8906" id="HorarioEstudio" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136" x="220" y="688.5"/><ellipse cx="236.35" cy="704.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M239.3188,710.1406 Q238.7406,710.4375 238.1,710.5781 Q237.4594,710.7344 236.7563,710.7344 Q234.2563,710.7344 232.9281,709.0938 Q231.6156,707.4375 231.6156,704.3125 Q231.6156,701.1875 232.9281,699.5313 Q234.2563,697.875 236.7563,697.875 Q237.4594,697.875 238.1,698.0313 Q238.7563,698.1875 239.3188,698.4844 L239.3188,701.2031 Q238.6938,700.625 238.1,700.3594 Q237.5063,700.0781 236.8813,700.0781 Q235.5375,700.0781 234.85,701.1563 Q234.1625,702.2188 234.1625,704.3125 Q234.1625,706.4063 234.85,707.4844 Q235.5375,708.5469 236.8813,708.5469 Q237.5063,708.5469 238.1,708.2813 Q238.6938,708 239.3188,707.4219 L239.3188,710.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="250.65" y="709.3467">HorarioEstudio</text><line style="stroke:#181818;stroke-width:0.5;" x1="221" x2="355" y1="720.5" y2="720.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="226" y="737.4951">-dia : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="226" y="753.792">-horaInicio : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="226" y="770.0889">-horaFin : String</text><line style="stroke:#181818;stroke-width:0.5;" x1="221" x2="355" y1="777.3906" y2="777.3906"/></g><!--MD5=[32d7535928c78e6e24010b3d79fd7979]
+class BloqueAgenda--><g id="elem_BloqueAgenda"><rect codeLine="41" fill="#F1F1F1" height="129.4844" id="BloqueAgenda" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136" x="562" y="672.5"/><ellipse cx="577.9" cy="688.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M580.8688,694.1406 Q580.2906,694.4375 579.65,694.5781 Q579.0094,694.7344 578.3063,694.7344 Q575.8063,694.7344 574.4781,693.0938 Q573.1656,691.4375 573.1656,688.3125 Q573.1656,685.1875 574.4781,683.5313 Q575.8063,681.875 578.3063,681.875 Q579.0094,681.875 579.65,682.0313 Q580.3063,682.1875 580.8688,682.4844 L580.8688,685.2031 Q580.2438,684.625 579.65,684.3594 Q579.0563,684.0781 578.4313,684.0781 Q577.0875,684.0781 576.4,685.1563 Q575.7125,686.2188 575.7125,688.3125 Q575.7125,690.4063 576.4,691.4844 Q577.0875,692.5469 578.4313,692.5469 Q579.0563,692.5469 579.65,692.2813 Q580.2438,692 580.8688,691.4219 L580.8688,694.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="592.1" y="693.3467">BloqueAgenda</text><line style="stroke:#181818;stroke-width:0.5;" x1="563" x2="697" y1="704.5" y2="704.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="568" y="721.4951">-fecha : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="568" y="737.792">-horaInicio : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="568" y="754.0889">-horaFin : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="568" y="770.3857">-tarea : Tarea</text><line style="stroke:#181818;stroke-width:0.5;" x1="563" x2="697" y1="777.6875" y2="777.6875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="568" y="794.6826">+toString()</text></g><!--MD5=[bc6b966899177359f0a97192efb86585]
+class Historial--><g id="elem_Historial"><rect codeLine="49" fill="#F1F1F1" height="96.8906" id="Historial" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="135" x="391.5" y="688.5"/><ellipse cx="428.55" cy="704.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M431.5188,710.1406 Q430.9406,710.4375 430.3,710.5781 Q429.6594,710.7344 428.9563,710.7344 Q426.4563,710.7344 425.1281,709.0938 Q423.8156,707.4375 423.8156,704.3125 Q423.8156,701.1875 425.1281,699.5313 Q426.4563,697.875 428.9563,697.875 Q429.6594,697.875 430.3,698.0313 Q430.9563,698.1875 431.5188,698.4844 L431.5188,701.2031 Q430.8938,700.625 430.3,700.3594 Q429.7063,700.0781 429.0813,700.0781 Q427.7375,700.0781 427.05,701.1563 Q426.3625,702.2188 426.3625,704.3125 Q426.3625,706.4063 427.05,707.4844 Q427.7375,708.5469 429.0813,708.5469 Q429.7063,708.5469 430.3,708.2813 Q430.8938,708 431.5188,707.4219 L431.5188,710.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="447.45" y="709.3467">Historial</text><line style="stroke:#181818;stroke-width:0.5;" x1="392.5" x2="525.5" y1="720.5" y2="720.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="397.5" y="737.4951">-actividades : List</text><line style="stroke:#181818;stroke-width:0.5;" x1="392.5" x2="525.5" y1="744.7969" y2="744.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="397.5" y="761.792">+registrar()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="397.5" y="778.0889">+getActividades()</text></g><!--MD5=[f26dcc97110d90e3fead486349fb4ce2]
+class NodoMateria--><g id="elem_NodoMateria"><rect codeLine="59" fill="#F1F1F1" height="96.8906" id="NodoMateria" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="180" x="1184" y="492"/><ellipse cx="1226.45" cy="508" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1229.4188,513.6406 Q1228.8406,513.9375 1228.2,514.0781 Q1227.5594,514.2344 1226.8563,514.2344 Q1224.3563,514.2344 1223.0281,512.5938 Q1221.7156,510.9375 1221.7156,507.8125 Q1221.7156,504.6875 1223.0281,503.0313 Q1224.3563,501.375 1226.8563,501.375 Q1227.5594,501.375 1228.2,501.5313 Q1228.8563,501.6875 1229.4188,501.9844 L1229.4188,504.7031 Q1228.7938,504.125 1228.2,503.8594 Q1227.6063,503.5781 1226.9813,503.5781 Q1225.6375,503.5781 1224.95,504.6563 Q1224.2625,505.7188 1224.2625,507.8125 Q1224.2625,509.9063 1224.95,510.9844 Q1225.6375,512.0469 1226.9813,512.0469 Q1227.6063,512.0469 1228.2,511.7813 Q1228.7938,511.5 1229.4188,510.9219 L1229.4188,513.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="1246.55" y="512.8467">NodoMateria</text><line style="stroke:#181818;stroke-width:0.5;" x1="1185" x2="1363" y1="524" y2="524"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119" x="1190" y="540.9951">-materia : Materia</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="1190" y="557.292">-izquierda : NodoMateria</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="1190" y="573.5889">-derecha : NodoMateria</text><line style="stroke:#181818;stroke-width:0.5;" x1="1185" x2="1363" y1="580.8906" y2="580.8906"/></g><!--MD5=[1babd821aeb7ddb9d4e672a66e370ea3]
+class ArbolMaterias--><g id="elem_ArbolMaterias"><rect codeLine="65" fill="#F1F1F1" height="96.8906" id="ArbolMaterias" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="141" x="1251.5" y="294.5"/><ellipse cx="1273.7" cy="310.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1276.6688,316.1406 Q1276.0906,316.4375 1275.45,316.5781 Q1274.8094,316.7344 1274.1063,316.7344 Q1271.6063,316.7344 1270.2781,315.0938 Q1268.9656,313.4375 1268.9656,310.3125 Q1268.9656,307.1875 1270.2781,305.5313 Q1271.6063,303.875 1274.1063,303.875 Q1274.8094,303.875 1275.45,304.0313 Q1276.1063,304.1875 1276.6688,304.4844 L1276.6688,307.2031 Q1276.0438,306.625 1275.45,306.3594 Q1274.8563,306.0781 1274.2313,306.0781 Q1272.8875,306.0781 1272.2,307.1563 Q1271.5125,308.2188 1271.5125,310.3125 Q1271.5125,312.4063 1272.2,313.4844 Q1272.8875,314.5469 1274.2313,314.5469 Q1274.8563,314.5469 1275.45,314.2813 Q1276.0438,314 1276.6688,313.4219 L1276.6688,316.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="1289.3" y="315.3467">ArbolMaterias</text><line style="stroke:#181818;stroke-width:0.5;" x1="1252.5" x2="1391.5" y1="326.5" y2="326.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="1257.5" y="343.4951">-raiz : NodoMateria</text><line style="stroke:#181818;stroke-width:0.5;" x1="1252.5" x2="1391.5" y1="350.7969" y2="350.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="1257.5" y="367.792">+insertar()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="1257.5" y="384.0889">+buscar()</text></g><!--MD5=[94b37c72970d043f570acbee487582c3]
+class GrafoMaterias--><g id="elem_GrafoMaterias"><rect codeLine="71" fill="#F1F1F1" height="113.1875" id="GrafoMaterias" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="165" x="1051.5" y="286.5"/><ellipse cx="1083.6" cy="302.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1086.5688,308.1406 Q1085.9906,308.4375 1085.35,308.5781 Q1084.7094,308.7344 1084.0063,308.7344 Q1081.5063,308.7344 1080.1781,307.0938 Q1078.8656,305.4375 1078.8656,302.3125 Q1078.8656,299.1875 1080.1781,297.5313 Q1081.5063,295.875 1084.0063,295.875 Q1084.7094,295.875 1085.35,296.0313 Q1086.0063,296.1875 1086.5688,296.4844 L1086.5688,299.2031 Q1085.9438,298.625 1085.35,298.3594 Q1084.7563,298.0781 1084.1313,298.0781 Q1082.7875,298.0781 1082.1,299.1563 Q1081.4125,300.2188 1081.4125,302.3125 Q1081.4125,304.4063 1082.1,305.4844 Q1082.7875,306.5469 1084.1313,306.5469 Q1084.7563,306.5469 1085.35,306.2813 Q1085.9438,306 1086.5688,305.4219 L1086.5688,308.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="1101.4" y="307.3467">GrafoMaterias</text><line style="stroke:#181818;stroke-width:0.5;" x1="1052.5" x2="1215.5" y1="318.5" y2="318.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="1057.5" y="335.4951">-relaciones : Map</text><line style="stroke:#181818;stroke-width:0.5;" x1="1052.5" x2="1215.5" y1="342.7969" y2="342.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="1057.5" y="359.792">+agregarMateria()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="1057.5" y="376.0889">+relacionar()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="1057.5" y="392.3857">+obtenerRelaciones()</text></g><!--MD5=[de08561f31f72a325979363b72cf9b4e]
+class GestorAcademico--><g id="elem_GestorAcademico"><rect codeLine="82" fill="#F1F1F1" height="178.375" id="GestorAcademico" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="172" x="358" y="254"/><ellipse cx="380.65" cy="270" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M383.6188,275.6406 Q383.0406,275.9375 382.4,276.0781 Q381.7594,276.2344 381.0563,276.2344 Q378.5563,276.2344 377.2281,274.5938 Q375.9156,272.9375 375.9156,269.8125 Q375.9156,266.6875 377.2281,265.0313 Q378.5563,263.375 381.0563,263.375 Q381.7594,263.375 382.4,263.5313 Q383.0563,263.6875 383.6188,263.9844 L383.6188,266.7031 Q382.9938,266.125 382.4,265.8594 Q381.8063,265.5781 381.1813,265.5781 Q379.8375,265.5781 379.15,266.6563 Q378.4625,267.7188 378.4625,269.8125 Q378.4625,271.9063 379.15,272.9844 Q379.8375,274.0469 381.1813,274.0469 Q381.8063,274.0469 382.4,273.7813 Q382.9938,273.5 383.6188,272.9219 L383.6188,275.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="396.35" y="274.8467">GestorAcademico</text><line style="stroke:#181818;stroke-width:0.5;" x1="359" x2="529" y1="286" y2="286"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="364" y="302.9951">-materias : List</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="364" y="319.292">-tareas : List</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="364" y="335.5889">-horarios : List</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="364" y="351.8857">-historial : Historial</text><line style="stroke:#181818;stroke-width:0.5;" x1="359" x2="529" y1="359.1875" y2="359.1875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="364" y="376.1826">+agregarMateria()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="364" y="392.4795">+agregarTarea()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="364" y="408.7764">+generarAgenda()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="364" y="425.0732">+recomendarTecnica()</text></g><!--MD5=[95e72a30ef631d2bb689a5ffd56cd4d7]
+class GestorPrioridades--><g id="elem_GestorPrioridades"><rect codeLine="93" fill="#F1F1F1" height="64.2969" id="GestorPrioridades" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="156" x="358" y="508.5"/><ellipse cx="373" cy="524.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M375.9688,530.1406 Q375.3906,530.4375 374.75,530.5781 Q374.1094,530.7344 373.4063,530.7344 Q370.9063,530.7344 369.5781,529.0938 Q368.2656,527.4375 368.2656,524.3125 Q368.2656,521.1875 369.5781,519.5313 Q370.9063,517.875 373.4063,517.875 Q374.1094,517.875 374.75,518.0313 Q375.4063,518.1875 375.9688,518.4844 L375.9688,521.2031 Q375.3438,520.625 374.75,520.3594 Q374.1563,520.0781 373.5313,520.0781 Q372.1875,520.0781 371.5,521.1563 Q370.8125,522.2188 370.8125,524.3125 Q370.8125,526.4063 371.5,527.4844 Q372.1875,528.5469 373.5313,528.5469 Q374.1563,528.5469 374.75,528.2813 Q375.3438,528 375.9688,527.4219 L375.9688,530.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="387" y="529.3467">GestorPrioridades</text><line style="stroke:#181818;stroke-width:0.5;" x1="359" x2="513" y1="540.5" y2="540.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="359" x2="513" y1="548.5" y2="548.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134" x="364" y="565.4951">+calcularPrioridad()</text></g><!--MD5=[63d09e4c2798b0e1f20a25ee2c2b97fb]
+class PlanificadorEstudio--><g id="elem_PlanificadorEstudio"><rect codeLine="97" fill="#F1F1F1" height="64.2969" id="PlanificadorEstudio" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="549" y="508.5"/><ellipse cx="564" cy="524.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M566.9688,530.1406 Q566.3906,530.4375 565.75,530.5781 Q565.1094,530.7344 564.4063,530.7344 Q561.9063,530.7344 560.5781,529.0938 Q559.2656,527.4375 559.2656,524.3125 Q559.2656,521.1875 560.5781,519.5313 Q561.9063,517.875 564.4063,517.875 Q565.1094,517.875 565.75,518.0313 Q566.4063,518.1875 566.9688,518.4844 L566.9688,521.2031 Q566.3438,520.625 565.75,520.3594 Q565.1563,520.0781 564.5313,520.0781 Q563.1875,520.0781 562.5,521.1563 Q561.8125,522.2188 561.8125,524.3125 Q561.8125,526.4063 562.5,527.4844 Q563.1875,528.5469 564.5313,528.5469 Q565.1563,528.5469 565.75,528.2813 Q566.3438,528 566.9688,527.4219 L566.9688,530.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="578" y="529.3467">PlanificadorEstudio</text><line style="stroke:#181818;stroke-width:0.5;" x1="550" x2="710" y1="540.5" y2="540.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="550" x2="710" y1="548.5" y2="548.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="555" y="565.4951">+generarAgenda()</text></g><!--MD5=[63d277e338271b9ea980c313f201ccf8]
+class RecomendadorTecnicas--><g id="elem_RecomendadorTecnicas"><rect codeLine="101" fill="#F1F1F1" height="64.2969" id="RecomendadorTecnicas" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="201" x="746.5" y="508.5"/><ellipse cx="761.5" cy="524.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M764.4688,530.1406 Q763.8906,530.4375 763.25,530.5781 Q762.6094,530.7344 761.9063,530.7344 Q759.4063,530.7344 758.0781,529.0938 Q756.7656,527.4375 756.7656,524.3125 Q756.7656,521.1875 758.0781,519.5313 Q759.4063,517.875 761.9063,517.875 Q762.6094,517.875 763.25,518.0313 Q763.9063,518.1875 764.4688,518.4844 L764.4688,521.2031 Q763.8438,520.625 763.25,520.3594 Q762.6563,520.0781 762.0313,520.0781 Q760.6875,520.0781 760,521.1563 Q759.3125,522.2188 759.3125,524.3125 Q759.3125,526.4063 760,527.4844 Q760.6875,528.5469 762.0313,528.5469 Q762.6563,528.5469 763.25,528.2813 Q763.8438,528 764.4688,527.4219 L764.4688,530.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="775.5" y="529.3467">RecomendadorTecnicas</text><line style="stroke:#181818;stroke-width:0.5;" x1="747.5" x2="946.5" y1="540.5" y2="540.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="747.5" x2="946.5" y1="548.5" y2="548.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="752.5" y="565.4951">+recomendar()</text></g><!--MD5=[dfdb0c2d2b931a1783f1e6a50cff41c4]
+class VentanaEduMind--><g id="elem_VentanaEduMind"><rect codeLine="109" fill="#F1F1F1" height="48" id="VentanaEduMind" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="149" x="668.5" y="131"/><ellipse cx="683.5" cy="147" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M686.4688,152.6406 Q685.8906,152.9375 685.25,153.0781 Q684.6094,153.2344 683.9063,153.2344 Q681.4063,153.2344 680.0781,151.5938 Q678.7656,149.9375 678.7656,146.8125 Q678.7656,143.6875 680.0781,142.0313 Q681.4063,140.375 683.9063,140.375 Q684.6094,140.375 685.25,140.5313 Q685.9063,140.6875 686.4688,140.9844 L686.4688,143.7031 Q685.8438,143.125 685.25,142.8594 Q684.6563,142.5781 684.0313,142.5781 Q682.6875,142.5781 682,143.6563 Q681.3125,144.7188 681.3125,146.8125 Q681.3125,148.9063 682,149.9844 Q682.6875,151.0469 684.0313,151.0469 Q684.6563,151.0469 685.25,150.7813 Q685.8438,150.5 686.4688,149.9219 L686.4688,152.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="697.5" y="151.8467">VentanaEduMind</text><line style="stroke:#181818;stroke-width:0.5;" x1="669.5" x2="816.5" y1="163" y2="163"/><line style="stroke:#181818;stroke-width:0.5;" x1="669.5" x2="816.5" y1="171" y2="171"/></g><!--MD5=[bc55f7966800a415950c5dc014b7d122]
+class VentanaAgregarTarea--><g id="elem_VentanaAgregarTarea"><rect codeLine="110" fill="#F1F1F1" height="48" id="VentanaAgregarTarea" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="182" x="451" y="131"/><ellipse cx="466" cy="147" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M468.9688,152.6406 Q468.3906,152.9375 467.75,153.0781 Q467.1094,153.2344 466.4063,153.2344 Q463.9063,153.2344 462.5781,151.5938 Q461.2656,149.9375 461.2656,146.8125 Q461.2656,143.6875 462.5781,142.0313 Q463.9063,140.375 466.4063,140.375 Q467.1094,140.375 467.75,140.5313 Q468.4063,140.6875 468.9688,140.9844 L468.9688,143.7031 Q468.3438,143.125 467.75,142.8594 Q467.1563,142.5781 466.5313,142.5781 Q465.1875,142.5781 464.5,143.6563 Q463.8125,144.7188 463.8125,146.8125 Q463.8125,148.9063 464.5,149.9844 Q465.1875,151.0469 466.5313,151.0469 Q467.1563,151.0469 467.75,150.7813 Q468.3438,150.5 468.9688,149.9219 L468.9688,152.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="480" y="151.8467">VentanaAgregarTarea</text><line style="stroke:#181818;stroke-width:0.5;" x1="452" x2="632" y1="163" y2="163"/><line style="stroke:#181818;stroke-width:0.5;" x1="452" x2="632" y1="171" y2="171"/></g><!--MD5=[96ac168001b54ef88dc65185d655c187]
+class VentanaHorario--><g id="elem_VentanaHorario"><rect codeLine="111" fill="#F1F1F1" height="48" id="VentanaHorario" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138" x="278" y="131"/><ellipse cx="293" cy="147" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M295.9688,152.6406 Q295.3906,152.9375 294.75,153.0781 Q294.1094,153.2344 293.4063,153.2344 Q290.9063,153.2344 289.5781,151.5938 Q288.2656,149.9375 288.2656,146.8125 Q288.2656,143.6875 289.5781,142.0313 Q290.9063,140.375 293.4063,140.375 Q294.1094,140.375 294.75,140.5313 Q295.4063,140.6875 295.9688,140.9844 L295.9688,143.7031 Q295.3438,143.125 294.75,142.8594 Q294.1563,142.5781 293.5313,142.5781 Q292.1875,142.5781 291.5,143.6563 Q290.8125,144.7188 290.8125,146.8125 Q290.8125,148.9063 291.5,149.9844 Q292.1875,151.0469 293.5313,151.0469 Q294.1563,151.0469 294.75,150.7813 Q295.3438,150.5 295.9688,149.9219 L295.9688,152.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="307" y="151.8467">VentanaHorario</text><line style="stroke:#181818;stroke-width:0.5;" x1="279" x2="415" y1="163" y2="163"/><line style="stroke:#181818;stroke-width:0.5;" x1="279" x2="415" y1="171" y2="171"/></g><!--MD5=[dda372b5a8c6fb57b55ce75bf734662b]
+class VentanaRecomendaciones--><g id="elem_VentanaRecomendaciones"><rect codeLine="112" fill="#F1F1F1" height="48" id="VentanaRecomendaciones" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="219" x="23.5" y="131"/><ellipse cx="38.5" cy="147" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M41.4688,152.6406 Q40.8906,152.9375 40.25,153.0781 Q39.6094,153.2344 38.9063,153.2344 Q36.4063,153.2344 35.0781,151.5938 Q33.7656,149.9375 33.7656,146.8125 Q33.7656,143.6875 35.0781,142.0313 Q36.4063,140.375 38.9063,140.375 Q39.6094,140.375 40.25,140.5313 Q40.9063,140.6875 41.4688,140.9844 L41.4688,143.7031 Q40.8438,143.125 40.25,142.8594 Q39.6563,142.5781 39.0313,142.5781 Q37.6875,142.5781 37,143.6563 Q36.3125,144.7188 36.3125,146.8125 Q36.3125,148.9063 37,149.9844 Q37.6875,151.0469 39.0313,151.0469 Q39.6563,151.0469 40.25,150.7813 Q40.8438,150.5 41.4688,149.9219 L41.4688,152.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="187" x="52.5" y="151.8467">VentanaRecomendaciones</text><line style="stroke:#181818;stroke-width:0.5;" x1="24.5" x2="241.5" y1="163" y2="163"/><line style="stroke:#181818;stroke-width:0.5;" x1="24.5" x2="241.5" y1="171" y2="171"/></g><!--MD5=[84718776d214be480e4c259efcb737fc]
+class Main--><g id="elem_Main"><rect codeLine="116" fill="#F1F1F1" height="64.2969" id="Main" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="67" x="709.5" y="7"/><ellipse cx="725.85" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M728.8188,28.6406 Q728.2406,28.9375 727.6,29.0781 Q726.9594,29.2344 726.2563,29.2344 Q723.7563,29.2344 722.4281,27.5938 Q721.1156,25.9375 721.1156,22.8125 Q721.1156,19.6875 722.4281,18.0313 Q723.7563,16.375 726.2563,16.375 Q726.9594,16.375 727.6,16.5313 Q728.2563,16.6875 728.8188,16.9844 L728.8188,19.7031 Q728.1938,19.125 727.6,18.8594 Q727.0063,18.5781 726.3813,18.5781 Q725.0375,18.5781 724.35,19.6563 Q723.6625,20.7188 723.6625,22.8125 Q723.6625,24.9063 724.35,25.9844 Q725.0375,27.0469 726.3813,27.0469 Q727.0063,27.0469 727.6,26.7813 Q728.1938,26.5 728.8188,25.9219 L728.8188,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="740.15" y="27.8467">Main</text><line style="stroke:#181818;stroke-width:0.5;" x1="710.5" x2="775.5" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="710.5" x2="775.5" y1="47" y2="47"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="715.5" y="63.9951">+main()</text></g><!--MD5=[db0d7a7de154a5881cc31a11d1855c10]
+reverse link Materia to Tarea--><g id="link_Materia_Tarea"><path codeLine="121" d="M723.48,805.22 C692.16,832.02 656.16,862.84 624.73,889.75 " fill="none" id="Materia-backto-Tarea" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="733.47,796.67,726.3105,797.5309,724.3515,804.4708,731.511,803.6099,733.47,796.67" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="717.537" y="799.4622">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="632.4028" y="879.7303">*</text></g><!--MD5=[52acc38fc88fb66200335afbbc09fa5b]
+link Tarea to TecnicaEstudio--><g id="link_Tarea_TecnicaEstudio"><path codeLine="122" d="M545,1048.16 C545,1066.34 545,1085.24 545,1102.62 " fill="none" id="Tarea-to-TecnicaEstudio" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="545,1107.96,549,1098.96,545,1102.96,541,1098.96,545,1107.96" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[137553461ad2e5d9db0a602a7d0e2996]
+link GestorAcademico to Materia--><g id="link_GestorAcademico_Materia"><path codeLine="123" d="M530.17,355.86 C664.17,376.28 912.6,422.65 965,492 C997.42,534.91 988.98,564.86 965,613 C946.09,650.96 909.26,680.3 875.38,700.79 " fill="none" id="GestorAcademico-to-Materia" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="870.84,703.5,880.6183,702.3235,875.1338,700.9381,876.5192,695.4535,870.84,703.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f2d1d30588d7c78ac0a764992e37490f]
+link GestorAcademico to Tarea--><g id="link_GestorAcademico_Tarea"><path codeLine="124" d="M357.99,411.52 C330.64,435.3 301.44,463.29 278,492 C186.17,604.49 123.28,688.63 203,810 C259.65,896.25 378.47,932.47 460,947.53 " fill="none" id="GestorAcademico-to-Tarea" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="465.31,948.49,457.1622,942.9571,460.3893,947.6031,455.7432,950.8302,465.31,948.49" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3fecf8e09786a51bf489fb20e5e8810c]
+link GestorAcademico to HorarioEstudio--><g id="link_GestorAcademico_HorarioEstudio"><path codeLine="125" d="M357.67,423.6 C340.11,444.17 323.75,467.49 313,492 C285.96,553.64 282.78,632.19 284.31,683.26 " fill="none" id="GestorAcademico-to-HorarioEstudio" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="284.48,688.43,288.1693,679.2982,284.3087,683.4329,280.174,679.5723,284.48,688.43" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0198d390f033e337df5a314d8dae86d6]
+link GestorAcademico to Historial--><g id="link_GestorAcademico_Historial"><path codeLine="126" d="M368.53,432.23 C330.07,488.3 299.34,560.03 341,613 C350.33,624.86 361.43,612.65 374,621 C397.66,636.71 417.14,661.33 431.46,683.77 " fill="none" id="GestorAcademico-to-Historial" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="434.26,688.23,432.8584,678.4814,431.5997,683.9964,426.0847,682.7378,434.26,688.23" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[31f6cbe0769df8211b0ff6dbc1ac7bb0]
+link GestorAcademico to GestorPrioridades--><g id="link_GestorAcademico_GestorPrioridades"><path codeLine="128" d="M440.4,432.03 C439.38,456.96 438.32,482.75 437.5,502.81 " fill="none" id="GestorAcademico-to-GestorPrioridades" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="437.29,508.05,441.6465,499.2171,437.4898,503.054,433.6529,498.8973,437.29,508.05" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d24c3f5312cb04c41bf9e7ace0c716d7]
+link GestorAcademico to PlanificadorEstudio--><g id="link_GestorAcademico_PlanificadorEstudio"><path codeLine="129" d="M527.75,432.03 C552.08,457.6 577.26,484.06 596.54,504.33 " fill="none" id="GestorAcademico-to-PlanificadorEstudio" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="600.07,508.05,596.777,498.768,596.6285,504.4229,590.9736,504.2744,600.07,508.05" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3d5c1723792ac39b1f52b444ab17be11]
+link GestorAcademico to RecomendadorTecnicas--><g id="link_GestorAcademico_RecomendadorTecnicas"><path codeLine="130" d="M530.45,385.94 C604.42,421.82 709.5,472.8 777.95,506 " fill="none" id="GestorAcademico-to-RecomendadorTecnicas" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="782.82,508.36,776.472,500.8298,778.3225,506.1755,772.9768,508.0259,782.82,508.36" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[abb66f93657cadacdf2aa8b43a920a89]
+link PlanificadorEstudio to BloqueAgenda--><g id="link_PlanificadorEstudio_BloqueAgenda"><path codeLine="132" d="M630,572.75 C630,598.13 630,634.87 630,667.07 " fill="none" id="PlanificadorEstudio-to-BloqueAgenda" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="630,672.19,634,663.19,630,667.19,626,663.19,630,672.19" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9cced12f7515df4c6daf6b00bac190d2]
+link ArbolMaterias to NodoMateria--><g id="link_ArbolMaterias_NodoMateria"><path codeLine="134" d="M1310.32,391.57 C1303.26,420.32 1294.26,457 1286.98,486.64 " fill="none" id="ArbolMaterias-to-NodoMateria" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1285.73,491.71,1291.7556,483.9195,1286.9191,486.8534,1283.9851,482.0169,1285.73,491.71" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e6f556e8d5d876ac440fc97859e37776]
+link NodoMateria to Materia--><g id="link_NodoMateria_Materia"><path codeLine="135" d="M1183.76,587.7 C1165.77,596.43 1146.9,605.24 1129,613 C1043.27,650.16 942.3,687.13 875.48,710.69 " fill="none" id="NodoMateria-to-Materia" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="870.73,712.37,880.5472,713.159,875.4471,710.7119,877.8942,705.6117,870.73,712.37" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[31aa40a89095a9f0edfbef9bb2ad9db8]
+link GrafoMaterias to Materia--><g id="link_GrafoMaterias_Materia"><path codeLine="136" d="M1123.58,399.61 C1110.09,458.52 1081.55,551.37 1027,613 C986.27,659.02 924.04,691.17 875.34,711.03 " fill="none" id="GrafoMaterias-to-Materia" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="870.67,712.92,880.5128,713.2653,875.3074,711.0508,877.522,705.8454,870.67,712.92" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[dacae86d3aaf32229dca59ae44b3a567]
+link VentanaEduMind to GestorAcademico--><g id="link_VentanaEduMind_GestorAcademico"><path codeLine="138" d="M705.74,179.18 C663.17,205.66 591.99,249.94 534.6,285.64 " fill="none" id="VentanaEduMind-to-GestorAcademico" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="530.14,288.41,539.8941,287.0468,534.384,285.7664,535.6643,280.2564,530.14,288.41" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6a87713f28e801993c9f116ca2504ad3]
+link VentanaAgregarTarea to GestorAcademico--><g id="link_VentanaAgregarTarea_GestorAcademico"><path codeLine="139" d="M529.79,179.18 C520.33,197.13 506.56,223.26 492.81,249.36 " fill="none" id="VentanaAgregarTarea-to-GestorAcademico" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="490.43,253.88,498.159,247.7756,492.757,249.4545,491.0781,244.0525,490.43,253.88" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[db6df9a893c2641af2139f32c2e2d6eb]
+link VentanaHorario to GestorAcademico--><g id="link_VentanaHorario_GestorAcademico"><path codeLine="140" d="M359.09,179.18 C368.45,197.13 382.08,223.26 395.69,249.36 " fill="none" id="VentanaHorario-to-GestorAcademico" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="398.05,253.88,397.4397,244.0501,395.7401,249.4456,390.3446,247.7459,398.05,253.88" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[26791ad22bd518074dc7bbf81e9c10e8]
+link VentanaRecomendaciones to GestorAcademico--><g id="link_VentanaRecomendaciones_GestorAcademico"><path codeLine="141" d="M171.76,179.18 C217,206.24 293.3,251.87 353.64,287.96 " fill="none" id="VentanaRecomendaciones-to-GestorAcademico" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="357.96,290.54,352.2808,282.4935,353.6662,287.9781,348.1817,289.3635,357.96,290.54" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2dfe306115a49938c7be23c4554ceb15]
+link Main to VentanaEduMind--><g id="link_Main_VentanaEduMind"><path codeLine="143" d="M743,71.15 C743,88.09 743,108.89 743,125.42 " fill="none" id="Main-to-VentanaEduMind" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="743,130.84,747,121.84,743,125.84,739,121.84,743,130.84" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9314f2db5b80644ba27b5954d13bc478]
+@startuml
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+
+' ================= DATOS =================
+package "Datos" {
+
+    class Materia {
+        - nombre : String
+        - importancia : int
+        - tareas : List
+        + agregarTarea()
+        + getNombre()
+        + getImportancia()
+    }
+
+    class Tarea {
+        - descripcion : String
+        - tipo : String
+        - complejidad : int
+        - tiempoEstimado : int
+        - prioridad : int
+        + getDescripcion()
+        + getComplejidad()
+        + getPrioridad()
+    }
+
+    class TecnicaEstudio {
+        - nombre : String
+        - descripcion : String
+        - pasos : String
+        - cuandoUsar : String
+        + toString()
+    }
+
+    class HorarioEstudio {
+        - dia : String
+        - horaInicio : String
+        - horaFin : String
+    }
+
+    class BloqueAgenda {
+        - fecha : String
+        - horaInicio : String
+        - horaFin : String
+        - tarea : Tarea
+        + toString()
+    }
+
+    class Historial {
+        - actividades : List
+        + registrar()
+        + getActividades()
+    }
+}
+
+' ================= ESTRUCTURAS =================
+package "Estructuras" {
+
+    class NodoMateria {
+        - materia : Materia
+        - izquierda : NodoMateria
+        - derecha : NodoMateria
+    }
+
+    class ArbolMaterias {
+        - raiz : NodoMateria
+        + insertar()
+        + buscar()
+    }
+
+    class GrafoMaterias {
+        - relaciones : Map
+        + agregarMateria()
+        + relacionar()
+        + obtenerRelaciones()
+    }
+}
+
+' ================= NEGOCIO =================
+package "Negocio" {
+
+    class GestorAcademico {
+        - materias : List
+        - tareas : List
+        - horarios : List
+        - historial : Historial
+        + agregarMateria()
+        + agregarTarea()
+        + generarAgenda()
+        + recomendarTecnica()
+    }
+
+    class GestorPrioridades {
+        + calcularPrioridad()
+    }
+
+    class PlanificadorEstudio {
+        + generarAgenda()
+    }
+
+    class RecomendadorTecnicas {
+        + recomendar()
+    }
+}
+
+' ================= UI =================
+package "Interfaz de Usuario" {
+
+    class VentanaEduMind
+    class VentanaAgregarTarea
+    class VentanaHorario
+    class VentanaRecomendaciones
+}
+
+' ================= MAIN =================
+class Main {
+    + main()
+}
+
+' ================= RELACIONES =================
+Materia "1" o- - "*" Tarea
+Tarea - -> TecnicaEstudio
+GestorAcademico - -> Materia
+GestorAcademico - -> Tarea
+GestorAcademico - -> HorarioEstudio
+GestorAcademico - -> Historial
+
+GestorAcademico - -> GestorPrioridades
+GestorAcademico - -> PlanificadorEstudio
+GestorAcademico - -> RecomendadorTecnicas
+
+PlanificadorEstudio - -> BloqueAgenda
+
+ArbolMaterias - -> NodoMateria
+NodoMateria - -> Materia
+GrafoMaterias - -> Materia
+
+VentanaEduMind - -> GestorAcademico
+VentanaAgregarTarea - -> GestorAcademico
+VentanaHorario - -> GestorAcademico
+VentanaRecomendaciones - -> GestorAcademico
+
+Main - -> VentanaEduMind
+@enduml
+
+@startuml
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+
+package "Datos" {
+
+    class Materia {
+        - nombre : String
+        - importancia : int
+        - tareas : List
+        + agregarTarea()
+        + getNombre()
+        + getImportancia()
+    }
+
+    class Tarea {
+        - descripcion : String
+        - tipo : String
+        - complejidad : int
+        - tiempoEstimado : int
+        - prioridad : int
+        + getDescripcion()
+        + getComplejidad()
+        + getPrioridad()
+    }
+
+    class TecnicaEstudio {
+        - nombre : String
+        - descripcion : String
+        - pasos : String
+        - cuandoUsar : String
+        + toString()
+    }
+
+    class HorarioEstudio {
+        - dia : String
+        - horaInicio : String
+        - horaFin : String
+    }
+
+    class BloqueAgenda {
+        - fecha : String
+        - horaInicio : String
+        - horaFin : String
+        - tarea : Tarea
+        + toString()
+    }
+
+    class Historial {
+        - actividades : List
+        + registrar()
+        + getActividades()
+    }
+}
+
+package "Estructuras" {
+
+    class NodoMateria {
+        - materia : Materia
+        - izquierda : NodoMateria
+        - derecha : NodoMateria
+    }
+
+    class ArbolMaterias {
+        - raiz : NodoMateria
+        + insertar()
+        + buscar()
+    }
+
+    class GrafoMaterias {
+        - relaciones : Map
+        + agregarMateria()
+        + relacionar()
+        + obtenerRelaciones()
+    }
+}
+
+package "Negocio" {
+
+    class GestorAcademico {
+        - materias : List
+        - tareas : List
+        - horarios : List
+        - historial : Historial
+        + agregarMateria()
+        + agregarTarea()
+        + generarAgenda()
+        + recomendarTecnica()
+    }
+
+    class GestorPrioridades {
+        + calcularPrioridad()
+    }
+
+    class PlanificadorEstudio {
+        + generarAgenda()
+    }
+
+    class RecomendadorTecnicas {
+        + recomendar()
+    }
+}
+
+package "Interfaz de Usuario" {
+
+    class VentanaEduMind
+    class VentanaAgregarTarea
+    class VentanaHorario
+    class VentanaRecomendaciones
+}
+
+class Main {
+    + main()
+}
+
+Materia "1" o- - "*" Tarea
+Tarea - -> TecnicaEstudio
+GestorAcademico - -> Materia
+GestorAcademico - -> Tarea
+GestorAcademico - -> HorarioEstudio
+GestorAcademico - -> Historial
+
+GestorAcademico - -> GestorPrioridades
+GestorAcademico - -> PlanificadorEstudio
+GestorAcademico - -> RecomendadorTecnicas
+
+PlanificadorEstudio - -> BloqueAgenda
+
+ArbolMaterias - -> NodoMateria
+NodoMateria - -> Materia
+GrafoMaterias - -> Materia
+
+VentanaEduMind - -> GestorAcademico
+VentanaAgregarTarea - -> GestorAcademico
+VentanaHorario - -> GestorAcademico
+VentanaRecomendaciones - -> GestorAcademico
+
+Main - -> VentanaEduMind
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

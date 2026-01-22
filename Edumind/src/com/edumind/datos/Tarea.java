@@ -13,13 +13,22 @@ public class Tarea implements Comparable<Tarea> {
     private String tipo;
     private boolean asignada = false;
 
-    public Tarea(String descripcion, LocalDate fechaEntrega, int complejidad, int tiempoMinutos, Materia materia, String tipo) {
+    private String tecnicaRecomendada;
+    private String descripcionTecnica;
+    private String pasosTecnica;
+    private String cuandoUsar;
+
+    public Tarea(String descripcion, LocalDate fechaEntrega, int complejidad, int tiempo, Materia materia, String tipo) {
         this.descripcion = descripcion;
         this.fechaEntrega = fechaEntrega;
         this.complejidad = complejidad;
-        this.tiempoMinutos = tiempoMinutos;
+        this.tiempoMinutos = tiempo;
         this.materia = materia;
         this.tipo = tipo;
+        this.tecnicaRecomendada = "";
+        this.descripcionTecnica = "";
+        this.pasosTecnica = "";
+        this.cuandoUsar = "";
     }
 
     public String getDescripcion() {
@@ -38,8 +47,8 @@ public class Tarea implements Comparable<Tarea> {
         return tiempoMinutos;
     }
 
-    public void setTiempo(int tiempoMinutos) {
-        this.tiempoMinutos = tiempoMinutos;
+    public void setTiempo(int tiempo) {
+        this.tiempoMinutos = tiempo;
     }
 
     public int getPrioridad() {
@@ -64,6 +73,38 @@ public class Tarea implements Comparable<Tarea> {
 
     public void setAsignada(boolean asignada) {
         this.asignada = asignada;
+    }
+
+    public String getTecnicaRecomendada() {
+        return tecnicaRecomendada;
+    }
+
+    public void setTecnicaRecomendada(String tecnicaRecomendada) {
+        this.tecnicaRecomendada = tecnicaRecomendada;
+    }
+
+    public String getDescripcionTecnica() {
+        return descripcionTecnica;
+    }
+
+    public void setDescripcionTecnica(String descripcionTecnica) {
+        this.descripcionTecnica = descripcionTecnica;
+    }
+
+    public String getPasosTecnica() {
+        return pasosTecnica;
+    }
+
+    public void setPasosTecnica(String pasosTecnica) {
+        this.pasosTecnica = pasosTecnica;
+    }
+
+    public String getCuandoUsar() {
+        return cuandoUsar;
+    }
+
+    public void setCuandoUsar(String cuandoUsar) {
+        this.cuandoUsar = cuandoUsar;
     }
 
     @Override

@@ -1,5 +1,4 @@
 package com.edumind.negocio;
-
 import com.edumind.datos.Tarea;
 
 public class RecomendadorTecnicas {

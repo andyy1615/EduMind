@@ -1,7 +1,8 @@
 package com.edumind.ui;
 
-import com.edumind.datos.Tarea;
 import com.edumind.negocio.GestorAcademico;
+import com.edumind.datos.Tarea;
+import com.edumind.datos.TecnicaEstudio;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +25,6 @@ public class VentanaRecomendaciones extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Panel superior
         JPanel top = new JPanel(new FlowLayout());
         JLabel lbl = new JLabel("Seleccione una tarea:");
         cbTareas = new JComboBox<>();
@@ -38,7 +38,6 @@ public class VentanaRecomendaciones extends JFrame {
 
         add(top, BorderLayout.NORTH);
 
-        // Área de texto para mostrar la recomendación
         txtRecomendacion = new JTextArea();
         txtRecomendacion.setEditable(false);
         txtRecomendacion.setLineWrap(true);
@@ -71,7 +70,7 @@ public class VentanaRecomendaciones extends JFrame {
             return;
         }
 
-        String recomendacion = gestor.recomendarTecnica(tarea);
-        txtRecomendacion.setText(recomendacion);
+        TecnicaEstudio recomendacion = gestor.recomendarTecnica(tarea);
+        txtRecomendacion.setText(recomendacion.toString());
     }
 }
